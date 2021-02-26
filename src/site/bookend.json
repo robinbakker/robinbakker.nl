@@ -1,0 +1,32 @@
+{
+  "bookendVersion": "v1.0",
+  "shareProviders": ["twitter", "email"],
+  "components": [
+    {
+      "type": "heading",
+      "text": "More to read"
+    },
+    {
+      "type": "portrait",
+      "title": "1tuner.com",
+      "url": "https://1tuner.com",
+      "image": "/assets/1tuner-home.png"
+    },
+    {
+      "type": "portrait",
+      "title": "Topzender.nl",
+      "url": "https://topzender.nl",
+      "image": "/assets/1tuner-home.png",
+      "category": "birds"
+    },
+    {
+      "type": "cta-link",
+      "links": [
+        {
+          "text": "Robin Bakker",
+          "url": "https://robinbakker.nl"
+        }
+      ]
+    }
+  ]
+}

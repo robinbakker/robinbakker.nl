@@ -1,0 +1,34 @@
+{
+  "name": "robinbakker.nl",
+  "version": "1.0.0",
+  "description": "Personal website of Robin Bakker",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env ELEVENTY_ENV=dev eleventy --serve",
+    "build": "cross-env ELEVENTY_ENV=prod eleventy",
+    "seed": "cross-env ELEVENTY_ENV=seed eleventy"
+  },
+  "author": "",
+  "license": "MIT",
+  "keywords": [],
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
+    "eleventy-plugin-pwa": "^1.0.8",
+    "html-minifier": "^4.0.0",
+    "terser": "^5.5.1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "cross-env": "^7.0.3"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "printWidth": 150,
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
+  }
+}
