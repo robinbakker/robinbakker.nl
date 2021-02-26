@@ -197,6 +197,7 @@ article.container {
   top: 0;
   z-index: 2;
   overflow: visible;
+  pointer-events: none;
 }
 .overlay circle,
 .overlay rect {

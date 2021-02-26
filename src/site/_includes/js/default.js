@@ -28,10 +28,11 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('/service-wor
         langItem.classList.add('is-hidden');
       }
     });
-    window.history.pushState({}, '', url.indexOf('https://') === -1 ? url : url.substr('https://www.robinbakker.nl'.length));
+    window.history.pushState({}, '', url);
   };
   if (userLang) {
     if (docLang != userLang) {
+      localStorage.setItem('lang', userLang);
       switchLanguage(userLang);
     }
   } else if (navigator.language) {
