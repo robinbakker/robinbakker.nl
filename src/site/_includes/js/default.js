@@ -13,13 +13,7 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('/service-wor
     document.documentElement.lang = lang;
     const langItems = document.querySelectorAll('.js-lang');
     if (!langItems || !langItems.length) {
-      if (window.location.hostname === 'localhost') {
-        url = window.location.href;
-      } else {
-        // no internal swich possible, redirect
-        window.location.href = url;
-        return;
-      }
+      return;
     }
     langItems.forEach((langItem) => {
       if (langItem.lang && langItem.lang == lang) {
