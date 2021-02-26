@@ -41,17 +41,6 @@ module.exports = function (config) {
   // minify the html output
   config.addTransform('htmlmin', require('./src/utils/minify-html.js'));
 
-  // compress and combine js files
-  // config.addFilter('jsmin', function(code) {
-  //   const UglifyJS = require('uglify-js');
-  //   let minified = UglifyJS.minify(code);
-  //     if (minified.error) {
-  //       console.log('UglifyJS error: ', minified.error);
-  //       return code;
-  //     }
-  //     return minified.code;
-  // });
-
   config.addNunjucksAsyncFilter('jsmin', async function (code, callback) {
     try {
       const minified = await minify(code);
@@ -67,7 +56,7 @@ module.exports = function (config) {
 
   // pass some assets right through
   config.addPassthroughCopy('./src/site/assets');
-  //config.addPassthroughCopy('./src/site/favicon.ico');
+  config.addPassthroughCopy('./src/site/favicon.ico');
   config.addPassthroughCopy('./src/site/manifest.json');
 
   // make the seed target act like prod
