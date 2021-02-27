@@ -24,19 +24,14 @@
 		<meta property="og:title" content="{{ title }}">
 		<meta property="og:description" content="{{ description }}">
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://robinbakker.nl{{ page.url }}">
-    {% if renderData.logo %}
-    {% set logo = renderData.logo %}
-    {% elif not logo | length %}
-    {% set logo = "https://robinbakker.nl/assets/android-chrome-512x512.png" %}
-    {% endif %}
-		<meta property="og:image" content="{{ site.shareImage }}">
+		<meta property="og:url" content="{{ site.baseUrl }}{{ page.url }}">
+		<meta property="og:image" content="{{ site.baseUrl }}{{ site.shareImage }}">
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:site" content="{{ site.twitter }}">
 		<meta name="twitter:creator" content="{{ site.twitter }}">
     <meta name="theme-color" content="#1c1c1c" />
     {%- for language in site.languages %}
-    <link rel="alternate" hreflang="{{ language.code }}" href="https://robinbakker.nl{{ '/'+language.code if language.code!='nl' }}{{ page.url }}">
+    <link rel="alternate" hreflang="{{ language.code }}" href="{{ site.baseUrl }}{{ '/'+language.code if language.code!='nl' }}{{ page.url }}">
     {%- endfor -%}
     <link rel="manifest" href="/manifest.json">
 		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
@@ -60,8 +55,8 @@
         "name":"Robin Bakker"
       },
       "@type":"WebSite",
-      "url":"https://robinbakker.nl",
-      "image":"https://robinbakker.nl/assets/icon-512x512.png",
+      "url":"{{ site.baseUrl }}",
+      "image":"{{ site.baseUrl }}/assets/icon-512x512.png",
       "headline":"Robin Bakker",
       "sameAs":[
         "https://twitter.com/robinbakker",

@@ -6,8 +6,11 @@ permalink: sitemap.xml
   {%- for page in collections.all %}
   {%- if page.data.layout %}
   <url>
-    <loc>{{ site.rootUrl }}{{ page.url }}</loc>
+    <loc>{{ site.baseUrl }}{{ page.url }}</loc>
   </url>
   {%- endif %}
   {%- endfor %}
+   <url>
+    <loc>{{ site.baseUrl }}/webstory.html</loc>
+  </url>
 </urlset>
