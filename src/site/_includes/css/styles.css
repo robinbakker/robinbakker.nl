@@ -303,12 +303,12 @@ body .home-item--start {
   margin: 0;
   line-height: 1.15;
   color: #fff;
-  opacity: 0;
+  opacity: 0.6;
   font-size: 1.9rem;
   animation: fadeIn;
   animation-delay: 1.5s;
   animation-duration: 1s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
 }
 .phone-frame {
@@ -983,7 +983,7 @@ input.radio-toggle {
   }
 
   to {
-    opacity: 0.66;
+    opacity: 0.6;
   }
 }
 
