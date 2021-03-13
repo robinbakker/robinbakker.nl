@@ -7,7 +7,7 @@ module.exports = function (config) {
 
   // Add service worker plugin
   config.addPlugin(pluginPWA, {
-    offlineGoogleAnalytics: true,
+    //offlineGoogleAnalytics: true,
     // Define runtime caching rules.
     runtimeCaching: [
       {

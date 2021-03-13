@@ -40,32 +40,14 @@
     <link rel="webmention" href="https://webmention.io/robinbakker.nl/webmention" />
     <link rel="pingback" href="https://webmention.io/robinbakker.nl/xmlrpc" />
     <script defer src="/js/default.js?v={{ site.buildTime }}"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108430-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-108430-1', { 'anonymize_ip': true });
-    </script>
-    <script type="application/ld+json">{
-      "name":"{{title}}",
-      "description":"{{description}}",
-      "author": {
-        "@type":"Person",
-        "name":"Robin Bakker"
-      },
-      "@type":"WebSite",
-      "url":"{{ site.baseUrl }}",
-      "image":"{{ site.baseUrl }}/assets/icon-512x512.png",
-      "headline":"Robin Bakker",
-      "sameAs":[
-        "https://twitter.com/robinbakker",
-        "https://www.linkedin.com/in/rhbakker",
-        "https://github.com/robinbakker",
-        "https://medium.com/@robinbakker"
-      ],
-      "@context":"http://schema.org"
-    }</script>
+    {% set js %}
+      {% include "js/ga.js" %}
+    {% endset %}
+    <script>{{ js | jsmin | safe }}</script>
+    {% set json %}
+      {% include "js/ga.js" %}
+    {% endset %}
+    <script type="application/ld+json">{"name":"{{title}}","description":"{{description}}","author":{"@type":"Person","name":"Robin Bakker"},"@type":"WebSite","url":"{{ site.baseUrl }}","image":"{{ site.baseUrl }}/assets/icon-512x512.png","headline":"Robin Bakker","sameAs":["https://twitter.com/robinbakker","https://www.linkedin.com/in/rhbakker","https://github.com/robinbakker","https://medium.com/@robinbakker"],"@context":"http://schema.org"}</script>
   </head>
   <body>
     {% include "overlay.njk" %}    

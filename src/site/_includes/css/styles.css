@@ -306,7 +306,7 @@ body .home-item--start {
   opacity: 0;
   font-size: 1.9rem;
   animation: fadeIn;
-  animation-delay: 2s;
+  animation-delay: 1.5s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
@@ -983,7 +983,7 @@ input.radio-toggle {
   }
 
   to {
-    opacity: 0.5;
+    opacity: 0.66;
   }
 }
 
