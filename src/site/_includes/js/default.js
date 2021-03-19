@@ -22,7 +22,7 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('/service-wor
         langItem.classList.add('is-hidden');
       }
     });
-    window.history.pushState({}, '', url);
+    window.history.pushState({}, '', window.location.origin + new URL(url).pathname);
   };
   if (userLang) {
     if (docLang != userLang) {
@@ -97,6 +97,7 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('/service-wor
       hiButton.appendChild(document.createTextNode('🙋‍♂️'));
       hiButton.addEventListener('click', function (ev) {
         ev.preventDefault();
+        document.querySelector('.home-item--about').scrollIntoView();
         console.log('klik...');
         fetch('https://hi.robinbakker.workers.dev', { method: 'POST', mode: 'cors', headers: { 'X-Custom-Hi': hiCode }, body: 'hi=' + hiCode })
           .then((response) => response.text())
@@ -129,7 +130,6 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('/service-wor
   const myHour = dateNow.getUTCHours() + hourOffset;
   let showTimeElms;
   if (myHour > 22 || myHour < 7) {
-    console.log(myHour + 'sleep');
     showTimeElms = document.querySelectorAll('.js-about-time--sleep');
   } else if (myHour === 7) {
     showTimeElms = document.querySelectorAll('.js-about-time--breakfast');
