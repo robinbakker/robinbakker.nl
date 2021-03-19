@@ -1,5 +1,6 @@
 const pluginPWA = require('eleventy-plugin-pwa');
 const { minify } = require('terser');
+const CleanCSS = require('clean-css');
 
 module.exports = function (config) {
   // A useful way to reference the context we are runing eleventy in
@@ -53,6 +54,10 @@ module.exports = function (config) {
   });
 
   config.addFilter('getInlineSVG', require('./src/utils/filters/get-inline-svg.js'));
+
+  config.addFilter('cssmin', function (code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
 
   // pass some assets right through
   config.addPassthroughCopy('./src/site/assets');

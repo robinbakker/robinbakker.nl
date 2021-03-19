@@ -224,28 +224,10 @@ article.container {
   fill: rgba(255, 255, 255, 0.5);
   transition: fill 1s ease-in-out;
 }
-.overlay circle {
-  r: 20vmin;
-  cx: 0;
-  cy: 35vmin;
-}
-.overlay rect.r2 {
-  transform-origin: 0 0;
-  x: 28vmin;
-  y: 36vmin;
-  width: 40vmin;
-  height: 16vmin;
-  rx: 5vmin;
-  ry: 5vmin;
-  transform: rotate(45deg);
-}
-.overlay circle.b1,
-.overlay circle.b2 {
-  cx: 100vw;
-}
-.overlay circle.b2 {
-  cy: 65vmin;
-}
+/* clean-css ignore:start */.overlay circle { r: 20vmin; cx: 0; cy: 35vmin; }
+.overlay rect.r2 { transform-origin: 0 0; x: 28vmin; y: 36vmin; width: 40vmin; height: 16vmin; rx: 5vmin; ry: 5vmin; transform: rotate(45deg); }
+.overlay circle.b1,.overlay circle.b2 {cx: 100vw;}
+.overlay circle.b2 {cy: 65vmin;}/* clean-css ignore:end */
 
 .body--intro .overlay circle,
 .body--intro .overlay rect,

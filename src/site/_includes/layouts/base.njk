@@ -11,7 +11,6 @@
     {% endif %}
     <title>{{ title }}</title>
     <link rel="preload" href="/assets/raleway-200.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/css/styles.css?v={{ site.buildTime }}">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -39,6 +38,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="webmention" href="https://webmention.io/robinbakker.nl/webmention" />
     <link rel="pingback" href="https://webmention.io/robinbakker.nl/xmlrpc" />
+    {% set css %}
+      {% include "css/styles.css" %}
+    {% endset %}
+    <style>{{ css | cssmin | safe }}</style>
     <script defer src="/js/default.js?v={{ site.buildTime }}"></script>
     {% set js %}
       {% include "js/ga.js" %}
