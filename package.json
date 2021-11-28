@@ -13,16 +13,16 @@
   "keywords": [],
   "private": true,
   "dependencies": {
-    "autoprefixer": "^10.1.0",
-    "clean-css": "^4.2.3",
-    "cssnano": "^4.1.10",
-    "dotenv": "^8.2.0",
+    "autoprefixer": "^10.4.0",
+    "clean-css": "^5.2.2",
+    "cssnano": "^5.0.12",
+    "dotenv": "^10.0.0",
     "eleventy-plugin-pwa": "^1.0.8",
     "html-minifier": "^4.0.0",
-    "terser": "^5.5.1"
+    "terser": "^5.10.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy": "^0.12.1",
     "cross-env": "^7.0.3"
   },
   "prettier": {

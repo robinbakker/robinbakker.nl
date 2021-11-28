@@ -16,7 +16,7 @@ This is the 🤓 page to show off my personal low-fi tech 😜 (see [uses.tech](
 - 🎧 JBL Tune 600BT NC
 - 📱 Motorola One Action (Android One)
 - ⌚ Fossil Sport FTW4019 (Google Wear)
-- 💻 Lenovo Thinkbook 15 G2 ARE (Windows 10)
+- 💻 Lenovo Thinkbook 15 G2 ARE (Windows 11)
 - ☕ Philips Espresso LatteGo 3200
 
 ### Web apps

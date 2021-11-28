@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const cssnano = require('cssnano');
+const { Console } = require('console');
 
 // also used to define the output filename in our output /css folder.
 const fileName = "styles.css";
@@ -16,7 +17,7 @@ module.exports = class {
   };
 
   async render ({ rawCss, rawFilepath }) {
-    return cssnano.process(rawCss, { from: rawFilepath })
+    return cssnano({ from: rawFilepath }).process(rawCss)
     .then(result => result.css);
   };
 }
