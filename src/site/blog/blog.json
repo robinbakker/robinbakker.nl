@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/blogpost.njk",
+  "permalink": "blog/{{ page.fileSlug }}/index.html",
+  "locale": "nl",
+  "bodyClass": "body--blog",
+  "isBlog": "true"
+}

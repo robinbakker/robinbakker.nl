@@ -1,0 +1,15 @@
+<ul>
+  {% for post in (postlist or collections.posts) | reverse %}
+    {% if (locale == 'nl' or post.data.locale == locale) 
+      and not post.data.draft %}
+      <li class="post-list-item">
+        <span>
+          <a href="{{ post.url }}" class="post-link">
+            {{ post.data.title }}
+          </a>
+        </span>
+        <time class="post-date" datetime="{{ post.date | dateISO(locale) }}">{{ post.date | date(locale) }}</time>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

@@ -1,4 +1,6 @@
-<div id="homepage-video-container" class="phone-frame phone-frame--camera"><video id="homepage-video" src="/assets/hi.mp4" loop></video></div>
+<div id="homepage-video-container" class="phone-frame phone-frame--camera">
+  <video id="homepage-video" src="/assets/hi.mp4" loop></video>
+</div>
 <div class="home-item home-item--start js-home-item" data-class="body--start">
   <div class="start-title">
     <h1>Robin Bakker</h1>
@@ -10,14 +12,14 @@
     <div class="text-shape"></div>
     <div class="js-lang {{ 'is-hidden' if locale!='nl' }}" lang="nl">
       <h2>Hoi!</h2>
-      <p>Gezellig dat je even langsklikt of aantikt. <sup>😀</sup><br />
+      <p>Gezellig dat je even langsklikt of aantikt. <sup>😀</sup><br/>
       Ik maak graag sites en web apps - scroll lekker door!</p>
       <p>Don't understand "<em>gezellig</em>"? <a href="/en" data-lang="en" class="js-lang-click">Try English</a>!</p>
       <p class="is-dark">Heb je het liever donker? Sorry, daar heb ik nu even niets voor...<br>Tip: 🕶</p>
     </div>
     <div class="js-lang {{ 'is-hidden' if locale!='en' }}" lang="en">
       <h2>Hi there!</h2>
-      <p>Happy to see you! <sup>😀</sup><br />I like to make sites and web apps - keep scrolling!</p>
+      <p>Happy to see you! <sup>😀</sup><br/>I like to make sites and web apps - keep scrolling!</p>
       <p>Uhm, do you understand "<em>gezellig</em>"? <a href="/" data-lang="nl" class="js-lang-click">Probeer Nederlands</a>!</p>
       <p class="is-dark">Do you prefer something dark? Sorry, not very dark here yet...<br>Suggestion: 🕶</p>
     </div>
@@ -28,14 +30,14 @@
     <h2 class="logo logo--1tuner">{{ '1tuner-logo.svg' | getInlineSVG | safe }}</h2>
     <div class="text-shape text-shape--right"></div>
     <div class="js-lang {{ 'is-hidden' if locale!='nl' }}" lang="nl">
-        <h3>Wat? Waarom? Hoe?</h3>
-        <p>Op <a href="https://1tuner.com" rel="noopener" target="_blank">1tuner.com</a> kun je luisteren naar radio en podcasts.</p>
-        <p>Ik wilde graag een web app maken om meer te leren over front-end frameworks.
+      <h3>Wat? Waarom? Hoe?</h3>
+      <p>Op <a href="https://1tuner.com" rel="noopener" target="_blank">1tuner.com</a> kun je luisteren naar radio en podcasts.</p>
+      <p>Ik wilde graag een web app maken om meer te leren over front-end frameworks.
         Daarnaast wilden we op kantoor automatisch schakelen tussen radiostations, dus dat vroeg om een oplossing 😎 (via "Playlists" kan je een luisterschema maken).</br>Meer weten? Ik heb er twee stukjes over geschreven:
-        <a href="https://medium.com/@robinbakker/creating-a-web-app-as-side-project-2b8f96a44893" rel="noopener" target="_blank">"Creating a web app as side project"</a> &amp;
-        <a href="https://medium.com/@robinbakker/updating-my-web-app-side-project-3963d818226" rel="noopener" target="_blank">"Updating my web app side project"</a>.</p>
-        <p>Dit is een statische, pre-rendered web app gemaakt met ⚛️ <a href="https://preactjs.com" target="_blank" rel="noopener">Preact</a>.<br>Je kunt 'm ook terugvinden <a href="https://github.com/robinbakker/1tuner" rel="noopener" target="_blank">op GitHub</a>.</p>
-        {# <h3>Killer features</h3>
+        <a href="/en/blog/creating-a-web-app-as-side-project/">"Creating a web app as side project"</a> &amp;
+        <a href="/en/blog/updating-my-web-app-side-project/">"Updating my web app side project"</a>.</p>
+    <p>Dit is een statische, pre-rendered web app gemaakt met ⚛️ <a href="https://preactjs.com" target="_blank" rel="noopener">Preact</a>.<br>Je kunt 'm ook terugvinden <a href="https://github.com/robinbakker/1tuner" rel="noopener" target="_blank">op GitHub</a>.</p>
+    {# <h3>Killer features</h3>
         <ul class="bullets">
           <li>Luister naar radio &amp; podcasts</li>
           <li>Maak een planning en switch automatisch van radiostation</li>
@@ -43,20 +45,20 @@
           <li>Chromecast support</li>
           <li>Laagdrempelig: gratis web app, geen ads en ik wil je niet tracken 😀</li>
         </ul> #}
-        <p>
-          <a href="https://1tuner.com" rel="noopener" target="_blank" class="btn btn-primary">Naar 1tuner.com</a>
-          <a href="https://twitter.com/1tuner" rel="noopener" target="_blank" title="1tuner op Twitter" class="btn btn-secondary icon-twitter">{{ 'twitter.svg' | getInlineSVG | safe }} @1tuner</a>
-        </p>
-    </div>
-    <div class="js-lang {{ 'is-hidden' if locale!='en' }}" lang="en">
-      <h3>What? Why? How?</h3>
-      <p>At <a href="https://1tuner.com" rel="noopener" target="_blank">1tuner.com</a> you can listen to radio and podcasts.</p>
-      <p>I wanted to create a web app to learn more about front-end frameworks. And at the office we wanted to automatically switch radio stations throughout the day. That problem needed to be solved... 😎</br>
+    <p>
+      <a href="https://1tuner.com" rel="noopener" target="_blank" class="btn btn-primary">Naar 1tuner.com</a>
+      <a href="https://twitter.com/1tuner" rel="noopener" target="_blank" title="1tuner op Twitter" class="btn btn-secondary icon-twitter">{{ 'twitter.svg' | getInlineSVG | safe }} @1tuner</a>
+    </p>
+  </div>
+  <div class="js-lang {{ 'is-hidden' if locale!='en' }}" lang="en">
+    <h3>What? Why? How?</h3>
+    <p>At <a href="https://1tuner.com" rel="noopener" target="_blank">1tuner.com</a> you can listen to radio and podcasts.</p>
+    <p>I wanted to create a web app to learn more about front-end frameworks. And at the office we wanted to automatically switch radio stations throughout the day. That problem needed to be solved... 😎</br>
       If you want to know more, I wrote 2 articles about it:
-      <a href="https://medium.com/@robinbakker/creating-a-web-app-as-side-project-2b8f96a44893" rel="noopener" target="_blank">"Creating a web app as side project"</a> &amp;
-      <a href="https://medium.com/@robinbakker/updating-my-web-app-side-project-3963d818226" rel="noopener" target="_blank">"Updating my web app side project"</a>.</p>
-      <p>This is a static, pre-rendered web app made with ⚛️ <a href="https://preactjs.com" target="_blank" rel="noopener">Preact</a>.<br>Find out more <a href="https://github.com/robinbakker/1tuner" rel="noopener" target="_blank">on GitHub</a>.</p>
-      {# <h3>Killer features</h3>
+      <a href="/en/blog/creating-a-web-app-as-side-project/">"Creating a web app as side project"</a> &amp;
+      <a href="/en/blog/updating-my-web-app-side-project/">"Updating my web app side project"</a>.</p>
+  <p>This is a static, pre-rendered web app made with ⚛️ <a href="https://preactjs.com" target="_blank" rel="noopener">Preact</a>.<br>Find out more <a href="https://github.com/robinbakker/1tuner" rel="noopener" target="_blank">on GitHub</a>.</p>
+  {# <h3>Killer features</h3>
       <ul class="bullets">
         <li>Listen to radio &amp; podcasts</li>
         <li>Plan your radio listening day and auto-switch radio streams</li>
@@ -64,177 +66,209 @@
         <li>Chromecast support</li>
         <li>Free web app, no ads and I'm not interested in tracking you 😀</li>
       </ul> #}
-      <p>
-        <a href="https://1tuner.com" rel="noopener" target="_blank" class="btn btn-primary">To 1tuner.com</a>
-        <a href="https://twitter.com/1tuner" rel="noopener" target="_blank" title="1tuner on Twitter" class="btn btn-secondary icon-twitter">{{ 'twitter.svg' | getInlineSVG | safe }} @1tuner</a>
-      </p>
-    </div>
-    <div id="showcase-1tuner" class="phone-frame"><img src="/assets/1tuner-home.png" loading="lazy" width="480" height="960" alt="1tuner home screen" /></div>
-  </div>
+  <p>
+    <a href="https://1tuner.com" rel="noopener" target="_blank" class="btn btn-primary">To 1tuner.com</a>
+    <a href="https://twitter.com/1tuner" rel="noopener" target="_blank" title="1tuner on Twitter" class="btn btn-secondary icon-twitter">{{ 'twitter.svg' | getInlineSVG | safe }} @1tuner</a>
+  </p>
+</div>
+<div id="showcase-1tuner" class="phone-frame"><img src="/assets/img/1tuner-home.png" loading="lazy" width="480" height="960" alt="1tuner home screen"/></div>
+</div>
 </div>
 <div class="home-item home-item--topzender js-home-item" data-class="body--topzender">
-  <div class="container">
-    <h2 class="logo logo--topzender">{{ 'topzender-logo.svg' | getInlineSVG | safe }}</h2>
-    <div class="js-lang {{ 'is-hidden' if locale!='nl' }}" lang="nl">
-      <h3>Wat? Waarom? Hoe?</h3>
-      <p>Op <a href="https://topzender.nl" rel="noopener" target="_blank">topzender.nl</a> kun je populaire/trending podcasts en radiozenders terugvinden.</p>
-      <p>Ik wilde voor dit experiment meer te weten komen over statische ("serverless") websites, en dit is daarom op die manier opgezet.
+<div class="container">
+<h2 class="logo logo--topzender">{{ 'topzender-logo.svg' | getInlineSVG | safe }}</h2>
+<div class="js-lang {{ 'is-hidden' if locale!='nl' }}" lang="nl">
+  <h3>Wat? Waarom? Hoe?</h3>
+  <p>Op <a href="https://topzender.nl" rel="noopener" target="_blank">topzender.nl</a> kun je populaire/trending podcasts en radiozenders terugvinden.</p>
+  <p>Ik wilde voor dit experiment meer te weten komen over statische ("serverless") websites, en dit is daarom op die manier opgezet.
       De website is gemaakt met <a href="https://www.11ty.dev" rel="noopener" target="_blank">Eleventy</a>,
       draait via <a href="https://www.netlify.com" rel="noopener" target="_blank">Netlify</a> en is door het gebruik van
       <a href="https://developers.cloudflare.com/workers/" rel="noopener" target="_blank">Cloudflare Workers</a> en verschillende triggers geheel geautomatiseerd.
       <br>Lees meer in
-      <a href="https://medium.com/@robinbakker/starting-a-static-side-project-75428dd41d9f" rel="noopener" target="_blank">"Starting a static side project"</a>
+      <a href="/en/blog/starting-a-static-side-project/">"Starting a static side project"</a>
       of op <a href="https://topzender.nl/over/"  rel="noopener" target="_blank">topzender.nl/over</a>.</p>
-      <p>
-        <a href="https://topzender.nl" rel="noopener" target="_blank" class="btn btn-primary">Naar topzender.nl</a>
-        <a href="https://twitter.com/topzender" rel="noopener" target="_blank" title="Topzender op Twitter" class="btn btn-secondary icon-twitter">{{ 'twitter.svg' | getInlineSVG | safe }} @topzender</a>
-      </p>
-    </div>
-    <div class="js-lang {{ 'is-hidden' if locale!='en' }}" lang="en">
-      <h3>What? Why? How?</h3>
-      <p>At <a href="https://topzender.nl" rel="noopener" target="_blank">topzender.nl</a> (Dutch) you can find the most popular podcasts and radio stations of the Netherlands.</p>
-      <p>For this experiment I wanted to find out more about static ("serverless") websites.
+  <p>
+    <a href="https://topzender.nl" rel="noopener" target="_blank" class="btn btn-primary">Naar topzender.nl</a>
+    <a href="https://twitter.com/topzender" rel="noopener" target="_blank" title="Topzender op Twitter" class="btn btn-secondary icon-twitter">{{ 'twitter.svg' | getInlineSVG | safe }} @topzender</a>
+  </p>
+</div>
+<div class="js-lang {{ 'is-hidden' if locale!='en' }}" lang="en">
+  <h3>What? Why? How?</h3>
+  <p>At <a href="https://topzender.nl" rel="noopener" target="_blank">topzender.nl</a> (Dutch) you can find the most popular podcasts and radio stations of the Netherlands.</p>
+  <p>For this experiment I wanted to find out more about static ("serverless") websites.
       Made with <a href="https://www.11ty.dev" rel="noopener" target="_blank">Eleventy</a>,
       runs at <a href="https://www.netlify.com" rel="noopener" target="_blank">Netlify</a> and is fully automated by using
       <a href="https://developers.cloudflare.com/workers/" rel="noopener" target="_blank">Cloudflare Workers</a> with triggers.
       <br>Read more in
-      <a href="https://medium.com/@robinbakker/starting-a-static-side-project-75428dd41d9f" rel="noopener" target="_blank">"Starting a static side project"</a>.</p>
-      <p>
-        <a href="https://topzender.nl" rel="noopener" target="_blank" class="btn btn-primary">To topzender.nl</a>
-        <a href="https://twitter.com/topzender" rel="noopener" target="_blank" title="Topzender on Twitter" class="btn btn-secondary icon-twitter">{{ 'twitter.svg' | getInlineSVG | safe }} @topzender</a>
-      </p>
-    </div>
-    {# Cards inspired by https://codepen.io/lonekorean/full/QWyjaeg #}
-    <div class="card-container">
-      <input type="radio" title="Show radio card" name="tz-cards" class="radio-toggle" id="real-radio">
-      <input type="radio" title="Show podcasts card" name="tz-cards" id="podcast-radio" class="radio-toggle" checked>
-      <div class="card-selector">
-        <label for="real-radio" class="card card--radio">
-          <h4>Top radio</h4>
-          <p class="subtitle js-lang {{ 'is-hidden' if locale!='nl' }}" lang="nl">
+      <a href="/en/blog/starting-a-static-side-project/">"Starting a static side project"</a>.</p>
+  <p>
+    <a href="https://topzender.nl" rel="noopener" target="_blank" class="btn btn-primary">To topzender.nl</a>
+    <a href="https://twitter.com/topzender" rel="noopener" target="_blank" title="Topzender on Twitter" class="btn btn-secondary icon-twitter">{{ 'twitter.svg' | getInlineSVG | safe }} @topzender</a>
+  </p>
+</div>
+{# Cards inspired by https://codepen.io/lonekorean/full/QWyjaeg #}
+<div class="card-container">
+  <input type="radio" title="Show radio card" name="tz-cards" class="radio-toggle" id="real-radio">
+  <input type="radio" title="Show podcasts card" name="tz-cards" id="podcast-radio" class="radio-toggle" checked>
+  <div class="card-selector">
+    <label for="real-radio" class="card card--radio">
+      <h4>Top radio</h4>
+      <p class="subtitle js-lang {{ 'is-hidden' if locale!='nl' }}" lang="nl">
             Mijn favoriete radiozenders
           </p>
-          <p class="subtitle js-lang {{ 'is-hidden' if locale!='en' }}" lang="en">
+      <p class="subtitle js-lang {{ 'is-hidden' if locale!='en' }}" lang="en">
             My favorite radio stations
           </p>
-          <ol class="listing listing--counter">
-            <li class="listing-item">
-              <span class="listing-item__image"
-                ><a href="https://topzender.nl/radio/kink/" target="_blank" rel="noopener"
-                  ><img src="/assets/radio-kink.png" loading="lazy" width="270" height="270" alt="KINK" /></a></span
-              ><span class="listing-item__title"><a href="https://topzender.nl/radio/kink/" target="_blank" rel="noopener">KINK</a></span>
-            </li>
-            <li class="listing-item">
-              <span class="listing-item__image"
-                ><a href="https://topzender.nl/radio/the-edge/" target="_blank" rel="noopener"
-                  ><img src="/assets/radio-edge.png" loading="lazy" width="270" height="270" alt="The Edge" /></a></span
-              ><span class="listing-item__title"><a href="https://topzender.nl/radio/the-edge/" target="_blank" rel="noopener">The Edge</a></span>
-            </li>
-            <li class="listing-item">
-              <span class="listing-item__image"
-                ><a href="https://topzender.nl/radio/npo-3fm/" target="_blank" rel="noopener"><img src="/assets/radio-npo3fm.png" loading="lazy" width="200" height="135" alt="NPO 3FM" /></a></span
-              ><span class="listing-item__title"><a href="https://topzender.nl/radio/npo-3fm/" target="_blank" rel="noopener">NPO 3FM</a></span>
-            </li>
-          </ol>
-        </label>
-        <label for="podcast-radio" class="card card--podcasts">
-          <h4>Top podcasts</h4>
-          <p class="subtitle js-lang {{ 'is-hidden' if locale!='nl' }}" lang="nl">
+      <ol class="listing listing--counter">
+        <li class="listing-item">
+          <span class="listing-item__image"
+                >
+            <a href="https://topzender.nl/radio/kink/" target="_blank" rel="noopener"
+                  >{% image "./src/site/assets/img/radio-kink.png", "KINK logo", "", [150, 300] %}</a>
+          </span
+              >
+          <span class="listing-item__title">
+            <a href="https://topzender.nl/radio/kink/" target="_blank" rel="noopener">KINK</a>
+          </span>
+        </li>
+        <li class="listing-item">
+          <span class="listing-item__image"
+                >
+            <a href="https://topzender.nl/radio/the-edge/" target="_blank" rel="noopener"
+                  >{% image "./src/site/assets/img/radio-edge.png", "The Edge logo", "", [150, 300] %}</a>
+          </span
+              >
+          <span class="listing-item__title">
+            <a href="https://topzender.nl/radio/the-edge/" target="_blank" rel="noopener">The Edge</a>
+          </span>
+        </li>
+        <li class="listing-item">
+          <span class="listing-item__image"
+                >
+            <a href="https://topzender.nl/radio/npo-3fm/" target="_blank" rel="noopener">{% image "./src/site/assets/img/radio-npo3fm.png", "NPO 3FM logo", "", [150, 300] %}</a>
+          </span
+              >
+          <span class="listing-item__title">
+            <a href="https://topzender.nl/radio/npo-3fm/" target="_blank" rel="noopener">NPO 3FM</a>
+          </span>
+        </li>
+      </ol>
+    </label>
+    <label for="podcast-radio" class="card card--podcasts">
+      <h4>Top podcasts</h4>
+      <p class="subtitle js-lang {{ 'is-hidden' if locale!='nl' }}" lang="nl">
             Mijn favoriete podcasts
           </p>
-          <p class="subtitle js-lang {{ 'is-hidden' if locale!='en' }}" lang="en">
+      <p class="subtitle js-lang {{ 'is-hidden' if locale!='en' }}" lang="en">
             My favorite podcasts
           </p>
-          <ol class="listing listing--counter">
-            <li class="listing-item">
-              <span class="listing-item__image"
-                ><a href="https://topzender.nl/podcast/een-podcast-over-media/" target="_blank" rel="noopener"
-                  ><img
-                    src="/assets/podcast-pom.jpg"
-                    loading="lazy"
-                    width="300" height="300"
-                    alt="Een Podcast over Media" /></a></span
-              ><span class="listing-item__title listing-item__title--flex"
-                ><span><a href="https://topzender.nl/podcast/een-podcast-over-media/" target="_blank" rel="noopener">Een Podcast over Media</a></span
-                ><span class="subtitle">Met Alexander Klöpping &amp; Ernst-Jan Pfauth</span></span
+      <ol class="listing listing--counter">
+        <li class="listing-item">
+          <span class="listing-item__image"
+                >
+            <a href="https://topzender.nl/podcast/een-podcast-over-media/" target="_blank" rel="noopener"
+                  >{% image "./src/site/assets/img/podcast-pom.jpg", "Een Podcast over Media logo", "", [150, 300] %}</a>
+          </span
               >
-            </li>
-            <li class="listing-item">
-              <span class="listing-item__image"
-                ><a href="https://topzender.nl/podcast/shoptalk-podcast-feed/" target="_blank" rel="noopener"
-                  ><img
-                    src="/assets/podcast-shoptalk.jpg"
-                    loading="lazy"
-                    width="300" height="300"
-                    alt="ShopTalk" /></a></span
-              ><span class="listing-item__title listing-item__title--flex"
-                ><span><a href="https://topzender.nl/podcast/shoptalk-podcast-feed/" target="_blank" rel="noopener">ShopTalk » Podcast Feed</a></span
-                ><span class="subtitle">Chris Coyier and Dave Rupert</span></span
+          <span class="listing-item__title listing-item__title--flex"
+                >
+            <span>
+              <a href="https://topzender.nl/podcast/een-podcast-over-media/" target="_blank" rel="noopener">Een Podcast over Media</a>
+            </span
+                >
+            <span class="subtitle">Met Alexander Klöpping &amp; Ernst-Jan Pfauth</span></span
               >
-            </li>
-            <li class="listing-item">
-              <span class="listing-item__image"
-                ><a href="https://topzender.nl/podcast/nrc-vandaag/" target="_blank" rel="noopener"
-                  ><img
-                    src="/assets/podcast-nrc.png"
-                    loading="lazy"
-                    width="300" height="300"
-                    alt="NRC Vandaag" /></a></span
-              ><span class="listing-item__title listing-item__title--flex"
-                ><span><a href="https://topzender.nl/podcast/nrc-vandaag/" target="_blank" rel="noopener">NRC Vandaag</a></span
-                ><span class="subtitle">NRC</span></span
+        </li>
+        <li class="listing-item">
+          <span class="listing-item__image"
+                >
+            <a href="https://topzender.nl/podcast/shoptalk-podcast-feed/" target="_blank" rel="noopener"
+                  >{% image "./src/site/assets/img/podcast-shoptalk.png", "ShopTalk logo", "", [150, 300] %}</a>
+          </span
               >
-            </li>
-          </ol>
-        </label>
-      </div>
-    </div>
-  </div>
-  <div class="home-item-footer">
-  {{ 'topzender-waves.svg' | getInlineSVG | safe }}
+          <span class="listing-item__title listing-item__title--flex"
+                >
+            <span>
+              <a href="https://topzender.nl/podcast/shoptalk-podcast-feed/" target="_blank" rel="noopener">ShopTalk » Podcast Feed</a>
+            </span
+                >
+            <span class="subtitle">Chris Coyier and Dave Rupert</span></span
+              >
+        </li>
+        <li class="listing-item">
+          <span class="listing-item__image"
+                >
+            <a href="https://topzender.nl/podcast/nrc-vandaag/" target="_blank" rel="noopener"
+                  >{% image "./src/site/assets/img/podcast-nrc.png", "NRC Vandaag logo", "", [150, 300] %}</a>
+          </span
+              >
+          <span class="listing-item__title listing-item__title--flex"
+                >
+            <span>
+              <a href="https://topzender.nl/podcast/nrc-vandaag/" target="_blank" rel="noopener">NRC Vandaag</a>
+            </span
+                >
+            <span class="subtitle">NRC</span></span
+              >
+        </li>
+      </ol>
+    </label>
   </div>
 </div>
+</div>
+<div class="home-item-footer">
+{{ 'topzender-waves.svg' | getInlineSVG | safe }}
+</div>
+</div>
 <div class="home-item home-item--about js-home-item" data-class="body--about">
-  <div class="container">
-    <div class="about-text js-lang {{ 'is-hidden' if locale!='nl' }}" lang="nl">
-      <h2>Over mij</h2>
-      <p>Ik <a href="https://www.youtube.com/watch?v=dkZn1enTqzs" rel="noopener" target="_blank">hou van hobby's, puzzelen</a> en favo kleur is blauw... 
+<div class="container">
+<div class="about-text js-lang {{ 'is-hidden' if locale!='nl' }}" lang="nl">
+  <h2>Over mij</h2>
+  <p>Ik <a href="https://www.youtube.com/watch?v=dkZn1enTqzs" rel="noopener" target="_blank">hou van hobby's, puzzelen</a> en favo kleur is blauw... 
       <span class="js-about-time--sleep is-hidden">En ik slaap nu waarschijnlijk lekker.</span>
-      <span class="js-about-time--coffee is-hidden">En het is tijd voor een bakkie.</span>
-      <span class="js-about-time--fruit is-hidden">🍌 Iiiiiiit's fruity time!</span> Eh, wacht. 😬
+    <span class="js-about-time--coffee is-hidden">En het is tijd voor een bakkie.</span>
+    <span class="js-about-time--fruit is-hidden">🍌 Iiiiiiit's fruity time!</span> Eh, wacht. 😬
       Dit soort verhaaltjes zijn toch altijd verschrikkelijk! Maar ik moet eerlijk bekennen dat ik die stiekem bij anderen graag lees, haha.</p>
-      <p>Wil je weten welke nerd dingen ik gebruik? Zie <a href="/uses">/uses</a>.</p>
-      <div class="js-hi is-hidden"></div>
-      <p>Alles op deze website is persoonlijk. Ik ben daarnaast werkzaam bij Visual Reality (het bedrijf achter <a href="https://www.toernooi.nl" rel="noopener" target="_blank">toernooi.nl</a>),
+  <p>Wil je weten welke nerd dingen ik gebruik? Zie <a href="/uses">/uses</a>.</p>
+  <div class="js-hi is-hidden"></div>
+  <p>Alles op deze website is persoonlijk. Ik ben daarnaast werkzaam bij Visual Reality (het bedrijf achter <a href="https://www.toernooi.nl" rel="noopener" target="_blank">toernooi.nl</a>),
       gericht op het ontwikkelen van software oplossingen voor de sportwereld. Ik werk aan websites, web apps en oplossingen op maat voor allerlei sportorganisaties.</p>
-    </div>
-    <div class="about-text js-lang {{ 'is-hidden' if locale!='en' }}" lang="en">
-      <h2>About me</h2>
-      <p>Do you want to know more about me? 😳<br>
-      <span class="js-about-time--sleep is-hidden">I'm probably asleep right now... 😴</span>
-      <span class="js-about-time--coffee is-hidden">I'm probably drinking coffee right now. ☕</span>
-      <span class="js-about-time--fruit is-hidden">🍌 Iiiiiiit's fruity time!</span>
+</div>
+<div class="about-text js-lang {{ 'is-hidden' if locale!='en' }}" lang="en">
+  <h2>About me</h2>
+  <p>Do you want to know more about me? 😳<br>
+    <span class="js-about-time--sleep is-hidden">I'm probably asleep right now... 😴</span>
+    <span class="js-about-time--coffee is-hidden">I'm probably drinking coffee right now. ☕</span>
+    <span class="js-about-time--fruit is-hidden">🍌 Iiiiiiit's fruity time!</span>
       Are you interested to see what kind of nerdy things I'm using? See <a href="/en/uses">/uses</a>.</p>
-      <div class="js-hi is-hidden"></div>
-      <p>All information here is personal stuff. In my day-to-day job at Visual Reality (<a href="https://www.tournamentsoftware.com" rel="noopener" target="_blank">tournamentsoftware.com</a>) 
+  <div class="js-hi is-hidden"></div>
+  <p>All information here is personal stuff. In my day-to-day job at Visual Reality (<a href="https://www.tournamentsoftware.com" rel="noopener" target="_blank">tournamentsoftware.com</a>) 
       I work as a web developer on websites, web apps and custom solutions for sports organizations.</p>
-      <p>There might be some more information about me if you search a bit more on this website... Or just contact me. 😉</p>
-    </div>
-    <div class="follow-me">
-      <p class="js-lang {{ 'is-hidden' if locale!='nl' }}" lang="nl">Je kunt mij ook vinden op:</p>
-      <p class="js-lang {{ 'is-hidden' if locale!='en' }}" lang="en">Follow me at:</p>
-      <ul class="follow-list">
-        <li class="follow-list__item">{{ 'twitter.svg' | getInlineSVG | safe }}<a class="twitter" href="https://twitter.com/robinbakker" title="Twitter" rel="me noopener" target="_blank">Twitter</a></li>
-        <li class="follow-list__item">{{ 'linkedin.svg' | getInlineSVG | safe }}<a class="linkedin" href="https://nl.linkedin.com/in/rhbakker/" title="LinkedIn" rel="me noopener" target="_blank">LinkedIn</a></li>
-        <li class="follow-list__item">{{ 'github.svg' | getInlineSVG | safe }}<a class="github" href="https://github.com/robinbakker" title="GitHub" rel="me noopener" target="_blank">GitHub</a></li>
-        <li class="follow-list__item">{{ 'medium.svg' | getInlineSVG | safe }}<a class="medium" href="https://medium.com/@robinbakker" title="Medium" rel="me noopener" target="_blank">Medium</a></li>
-      </ul>
-    </div>
-    <ul class="photo-list">
-      <li class="photo-list__item"><img src="/assets/bike-it.jpg" loading="lazy" width="640" height="640" class="insta-photo" alt="Biking in Italy" /></li>
-      <li class="photo-list__item"><img src="/assets/nz-sunrise.jpg" loading="lazy" width="640" height="640" class="insta-photo" alt="First sunrise of 2017 in NZ" /></li>
-      <li class="photo-list__item"><img src="/assets/cargo-bike.jpg" loading="lazy" width="640" height="640" class="insta-photo" alt="Riding the cargo bike" /></li>
-      <li class="photo-list__item"><img src="/assets/stroopwafel.jpg" loading="lazy" width="640" height="640" class="insta-photo" alt="Coffee stroopwafel" /></li>
-    </ul>
-  </div>
+  <p>There might be some more information about me if you search a bit more on this website... Or just contact me. 😉</p>
+</div>
+<div class="follow-me">
+  <p class="js-lang {{ 'is-hidden' if locale!='nl' }}" lang="nl">Je kunt mij ook vinden op:</p>
+  <p class="js-lang {{ 'is-hidden' if locale!='en' }}" lang="en">Follow me at:</p>
+  <ul class="follow-list">
+    <li class="follow-list__item">{{ 'twitter.svg' | getInlineSVG | safe }}
+      <a class="twitter" href="https://twitter.com/robinbakker" title="Twitter" rel="me noopener" target="_blank">Twitter</a>
+    </li>
+    <li class="follow-list__item">{{ 'linkedin.svg' | getInlineSVG | safe }}
+      <a class="linkedin" href="https://nl.linkedin.com/in/rhbakker/" title="LinkedIn" rel="me noopener" target="_blank">LinkedIn</a>
+    </li>
+    <li class="follow-list__item">{{ 'github.svg' | getInlineSVG | safe }}
+      <a class="github" href="https://github.com/robinbakker" title="GitHub" rel="me noopener" target="_blank">GitHub</a>
+    </li>
+    <li class="follow-list__item">{{ 'medium.svg' | getInlineSVG | safe }}
+      <a class="medium" href="https://medium.com/@robinbakker" title="Medium" rel="me noopener" target="_blank">Medium</a>
+    </li>
+  </ul>
+</div>
+<ul class="photo-list">
+  <li class="photo-list__item"><img src="/assets/img/bike-it.jpg" loading="lazy" width="640" height="640" class="insta-photo" alt="Biking in Italy"/></li>
+  <li class="photo-list__item"><img src="/assets/img/nz-sunrise.jpg" loading="lazy" width="640" height="640" class="insta-photo" alt="First sunrise of 2017 in NZ"/></li>
+  <li class="photo-list__item"><img src="/assets/img/cargo-bike.jpg" loading="lazy" width="640" height="640" class="insta-photo" alt="Riding the cargo bike"/></li>
+  <li class="photo-list__item"><img src="/assets/img/stroopwafel.jpg" loading="lazy" width="640" height="640" class="insta-photo" alt="Coffee stroopwafel"/></li>
+</ul>
+</div>
 </div>

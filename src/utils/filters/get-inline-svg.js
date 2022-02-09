@@ -1,5 +1,5 @@
 const fs = require('fs');
-const baseLocation = './src/site/assets/';
+const baseLocation = './src/site/assets/img/';
 
 module.exports = (fileName) => {
   const fileLocation = `${baseLocation}${fileName}`;

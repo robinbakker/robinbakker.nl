@@ -1,0 +1,8 @@
+<ul class="p-category listing listing--inline listing--tags">
+  {% for tag in (tags or collections.tagList) %}
+    {% set tagUrl %}{{ '/'+locale if locale!='nl' }}/blog/tag/{{ tag | slug }}/{% endset %}
+    <li class="listing-item listing-item--tag">
+      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag | titleCase }}</a>
+    </li>
+  {% endfor %}
+</ul>

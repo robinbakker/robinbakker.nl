@@ -1,59 +1,113 @@
-<!doctype html>{%- if locale -%}
-<html lang="{{ locale }}">{%- else -%}<html lang="en">{%- endif -%}
-  <head>
-    <meta charset="utf-8">
-    {% if renderData.metaTitle %}
-    {% set title = renderData.metaTitle %}
-    {% elif site[locale].metaTitle %}
-    {% set title = site[locale].metaTitle %}
-    {% elif not title | length %}
-    {% set title = "Robin Bakker" %}
-    {% endif %}
-    <title>{{ title }}</title>
-    <link rel="preload" href="/assets/raleway-200.woff2" as="font" type="font/woff2" crossorigin>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-    {% if renderData.metaDescription %}
-    {% set description = renderData.metaDescription %}
-    {% elif site[locale].metaDescription %}
-    {% set description = site[locale].metaDescription %}
-    {% endif %}
-		<meta name="description" content="{{ description }}">
-		<meta property="og:title" content="{{ title }}">
-		<meta property="og:description" content="{{ description }}">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="{{ site.baseUrl }}{{ page.url }}">
-		<meta property="og:image" content="{{ site.baseUrl }}{{ site.shareImage }}">
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:site" content="{{ site.twitter }}">
-		<meta name="twitter:creator" content="{{ site.twitter }}">
-    <meta name="theme-color" content="#1c1c1c" />
-    {%- for language in site.languages %}
-    <link rel="alternate" hreflang="{{ language.code }}" href="{{ site.baseUrl }}{{ '/'+language.code if language.code!='nl' }}{{ page.url }}">
-    {%- endfor -%}
-    <link rel="manifest" href="/manifest.json">
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="webmention" href="https://webmention.io/robinbakker.nl/webmention" />
-    <link rel="pingback" href="https://webmention.io/robinbakker.nl/xmlrpc" />
-    {% set css %}
+<!doctype html>
+{%- if locale -%}
+  <html lang="{{ locale }}">
+  {%- else -%}
+    <html lang="en">
+    {%- endif -%}
+    <head>
+      <meta charset="utf-8">
+      {% if renderData.metaTitle %}
+        {% set pageTitle = renderData.metaTitle %}
+      {% elif site[locale].metaTitle %}
+        {% set pageTitle = site[locale].metaTitle %}
+      {% elif title %}
+        {% set pageTitle = title %}
+      {% else %}
+        {% set pageTitle = "Robin Bakker" %}
+      {% endif %}
+      <title>{{ pageTitle }}</title>
+      <link rel="preload" href="/assets/raleway-200.woff2" as="font" type="font/woff2" crossorigin>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      {% if renderData.metaDescription %}
+        {% set description = renderData.metaDescription %}
+      {% elif site[locale].metaDescription %}
+        {% set description = site[locale].metaDescription %}
+      {% endif %}
+      <meta name="description" content="{{ description }}">
+      <meta property="og:title" content="{{ title }}">
+      <meta property="og:description" content="{{ description }}">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="{{ site.baseUrl }}{{ page.url }}">
+      {%- if isBlog -%}
+        {# {% set socialImgUrl %}{% socialImage renderData.metaTitle or title or pageTitle,
+        "Robin Bakker" %}{% endset %} #}
+        <meta property="og:image" content="{% socialImage renderData.metaTitle or title or pageTitle,
+        'Robin Bakker' %}">
+      {%- else -%}
+        <meta property="og:image" content="{{ site.baseUrl }}{{ site.shareImage }}">
+      {%- endif -%}
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="{{ site.twitter }}">
+      <meta name="twitter:creator" content="{{ site.twitter }}">
+      <meta name="theme-color" content="#1c1c1c"/>
+      {%- if isBlog -%}
+        {%- if not blogImage -%}
+          {% set bodyClass = [bodyClass, ' body--blog-no-image'] | join %}
+        {%- endif -%}
+        <link rel="alternate" hreflang="{{ locale }}" href="{{ site.baseUrl }}{{ page.url }}">
+        {%- if alternateUrl -%}
+          {% set altLocale = '' %}
+          {%- for language in site.languages %}
+            {% if language.code != locale %}
+              {% set altLocale = language.code %}
+            {%- endif -%}
+          {%- endfor -%}
+          <link rel="alternate" hreflang="{{ altLocale }}" href="{{ site.baseUrl }}{{ alternateUrl }}">
+        {%- endif -%}
+      {%- else -%}
+        {%- for language in site.languages %}
+          <link rel="alternate" hreflang="{{ language.code }}" href="{{ site.baseUrl }}{{ '/'+language.code if language.code!='nl' }}{{ page.url | removeUrlLocale | safe }}">
+        {%- endfor -%}
+      {%- endif -%}
+      <link rel="manifest" href="/manifest.json">
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+      <link rel="webmention" href="https://webmention.io/robinbakker.nl/webmention"/>
+      <link rel="pingback" href="https://webmention.io/robinbakker.nl/xmlrpc"/>
+      {% set css %}
       {% include "css/styles.css" %}
-    {% endset %}
-    <style>{{ css | cssmin | safe }}</style>
-    <script defer src="/js/default.js?v={{ site.buildTime }}"></script>
-    {% set js %}
+      {% endset %}
+      <style>
+        {{css | cssmin | safe}}
+      </style>
+      <script defer src="/js/default.js?v={{ site.buildTime }}"></script>
+      {% set js %}
       {% include "js/ga.js" %}
-    {% endset %}
-    <script>{{ js | jsmin | safe }}</script>
-    {% set json %}
+      {% endset %}
+      <script>
+        {{ js | jsmin | safe }}
+      </script>
+      {% set json %}
       {% include "js/ga.js" %}
-    {% endset %}
-    <script type="application/ld+json">{"name":"{{title}}","description":"{{description}}","author":{"@type":"Person","name":"Robin Bakker"},"@type":"WebSite","url":"{{ site.baseUrl }}","image":"{{ site.baseUrl }}/assets/icon-512x512.png","headline":"Robin Bakker","sameAs":["https://twitter.com/robinbakker","https://www.linkedin.com/in/rhbakker","https://github.com/robinbakker","https://medium.com/@robinbakker"],"@context":"http://schema.org"}</script>
-  </head>
-  <body>
-    {% include "overlay.njk" %}    
-    {{ content | safe }}
-  </body>
-</html>
+      {% endset %}
+      <script type="application/ld+json">
+        {
+          "name": "{{title}}",
+          "description": "{{description}}",
+          "author": {
+            "@type": "Person",
+            "name": "Robin Bakker"
+          },
+          "@type": "WebSite",
+          "url": "{{ site.baseUrl }}",
+          "image": "{{ site.baseUrl }}/assets/icon-512x512.png",
+          "headline": "Robin Bakker",
+          "sameAs": [
+            "https://twitter.com/robinbakker", "https://www.linkedin.com/in/rhbakker", "https://github.com/robinbakker", "https://medium.com/@robinbakker"
+          ],
+          "@context": "http://schema.org"
+        }
+      </script>
+    </head>
+    {%- if bodyClass -%}
+      <body class="{{ bodyClass }}">
+      {%- else -%}
+        <body>
+        {%- endif -%}
+        {% include "overlay.njk" %}
+        {{ content | safe }}
+      </body>
+    </html>

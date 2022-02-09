@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+---
+{% include "header.njk" %}
+<main>
+  {% if blogImage %}
+    {% image blogImage, blogImageAlt, "header-image", [600, 800, 1024, 1200] %}
+  {% endif %}
+  <article itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="{{ title | slug }}-title" class="container h-entry">
+    <header>
+      <h1 id="{{ title | slug }}-title" class="blog-title p-name" itemprop="headline">{{ title }}</h1>
+    </header>
+    <p class="blog-description" class="p-summary">{{ description }}</p>
+    <p class="blog-datetime">
+      <time datetime="{{ page.date | dateISO(locale) }}" itemprop="datePublished" class="dt-published">{{ page.date | date(locale) }}</time>
+    </p>
+    <div itemprop="articleBody">
+      {{ content | safe }}
+    </div>
+    {% if tags %}
+      {% include "taglist.njk" %}
+    {% endif %}
+  </article>
+  {% set otherPosts = collections.posts | excludePage(page) | slice(-10) %}
+  <ul>
+    {% for post in otherPosts | reverse %}
+      <li>
+        <a href="{{ post.url | url }}">
+          <span>{{ post.data.title }}</span>
+          <time datetime="{{ post.date | dateToISO }}" aria-label=", written {{ post.date }}">
+            {{ post.date | readableDate('dd LLL yyyy') }}
+          </time>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</main>
+{% include "footer.njk" %}

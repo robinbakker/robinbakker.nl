@@ -1,0 +1,26 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+layout: layouts/page.njk
+eleventyComputed:
+  title: {{ tag | titleCase }}
+  description: My blog posts about {{ tag }}
+permalink: /en/blog/tag/{{ tag | slug }}/
+---
+<article>
+  <header>
+    <h1>{{ tag | titleCase }}</h1>
+    <p>My blog posts about {{ tag }}.</p>
+  </header>
+  {% set postlist = collections[tag] %}
+  {% include "postlist.njk" %}
+  <p>
+    <a href="{{ '../' | url }}">All tags</a>
+  </p>
+</article>
