@@ -8,22 +8,24 @@
       <meta charset="utf-8">
       {% if renderData.metaTitle %}
         {% set pageTitle = renderData.metaTitle %}
-      {% elif site[locale].metaTitle %}
+      {% elif site[locale].metaTitle and not isBlog %}
         {% set pageTitle = site[locale].metaTitle %}
       {% elif title %}
         {% set pageTitle = title %}
       {% else %}
-        {% set pageTitle = "Robin Bakker" %}
+        {% set pageTitle = site.name %}
       {% endif %}
       <title>{{ pageTitle }}</title>
       <link rel="preload" href="/assets/raleway-200.woff2" as="font" type="font/woff2" crossorigin>
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta name="mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-capable" content="yes">
-      {% if renderData.metaDescription %}
-        {% set description = renderData.metaDescription %}
-      {% elif site[locale].metaDescription %}
-        {% set description = site[locale].metaDescription %}
+      {%- if not isBlog -%}
+        {% if renderData.metaDescription %}
+          {% set description = renderData.metaDescription %}
+        {% elif site[locale].metaDescription %}
+          {% set description = site[locale].metaDescription %}
+        {% endif %}
       {% endif %}
       <meta name="description" content="{{ description }}">
       <meta property="og:title" content="{{ title }}">
@@ -31,14 +33,12 @@
       <meta property="og:type" content="website">
       <meta property="og:url" content="{{ site.baseUrl }}{{ page.url }}">
       {%- if isBlog -%}
-        {# {% set socialImgUrl %}{% socialImage renderData.metaTitle or title or pageTitle,
-        "Robin Bakker" %}{% endset %} #}
-        <meta property="og:image" content="{% socialImage renderData.metaTitle or title or pageTitle,
-        'Robin Bakker' %}">
+        <meta property="og:image" content="{{ site.baseUrl }}{% socialImage renderData.metaTitle or title or pageTitle, site.name %}">
+        <meta name="twitter:card" content="summary_large_image">
       {%- else -%}
         <meta property="og:image" content="{{ site.baseUrl }}{{ site.shareImage }}">
+        <meta name="twitter:card" content="summary">
       {%- endif -%}
-      <meta name="twitter:card" content="summary">
       <meta name="twitter:site" content="{{ site.twitter }}">
       <meta name="twitter:creator" content="{{ site.twitter }}">
       <meta name="theme-color" content="#1c1c1c"/>
@@ -83,24 +83,26 @@
       {% set json %}
       {% include "js/ga.js" %}
       {% endset %}
-      <script type="application/ld+json">
-        {
-          "name": "{{title}}",
-          "description": "{{description}}",
-          "author": {
-            "@type": "Person",
-            "name": "Robin Bakker"
-          },
-          "@type": "WebSite",
-          "url": "{{ site.baseUrl }}",
-          "image": "{{ site.baseUrl }}/assets/icon-512x512.png",
-          "headline": "Robin Bakker",
-          "sameAs": [
-            "https://twitter.com/robinbakker", "https://www.linkedin.com/in/rhbakker", "https://github.com/robinbakker", "https://medium.com/@robinbakker"
-          ],
-          "@context": "http://schema.org"
-        }
-      </script>
+      {%- if not isBlog -%}
+        <script type="application/ld+json">
+          {
+            "name": "{{title}}",
+            "description": "{{description}}",
+            "author": {
+              "@type": "Person",
+              "name": "{{ site.name }}"
+            },
+            "@type": "WebSite",
+            "url": "{{ site.baseUrl }}",
+            "image": "{{ site.baseUrl }}/assets/icon-512x512.png",
+            "headline": "{{ site.name }}",
+            "sameAs": [
+              "https://twitter.com/robinbakker", "https://www.linkedin.com/in/rhbakker", "https://github.com/robinbakker", "https://medium.com/@robinbakker"
+            ],
+            "@context": "http://schema.org"
+          }
+        </script>
+      {%- endif -%}
     </head>
     {%- if bodyClass -%}
       <body class="{{ bodyClass }}">

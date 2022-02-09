@@ -248,6 +248,9 @@ article.container {
   position: relative;
   z-index: 5;
 }
+article.container.h-entry {
+  padding-bottom: 0;
+}
 .overlay {
   display: block;
   position: fixed;
@@ -916,6 +919,23 @@ img.article-image {
   height: auto;
   margin: 3rem auto;
   display: block;
+}
+
+.blog-author {
+  display: flex;
+  opacity: 0.75;
+  justify-content: center;
+  margin-top: 10vh;
+  margin-bottom: 0;
+}
+.blog-author .p-author {
+  display: flex;
+  align-items: center;
+}
+.blog-author .u-photo {
+  max-height: 1.5rem;
+  width: auto;
+  margin-right: 0.5rem;
 }
 
 @media (orientation: portrait) {

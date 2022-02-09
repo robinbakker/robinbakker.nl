@@ -20,19 +20,14 @@ layout: layouts/base.njk
     {% if tags %}
       {% include "taglist.njk" %}
     {% endif %}
+    <div class="blog-author">
+      <p class="h-card p-author">
+        <img class="u-photo" alt="{{ site.name }}" src="{{ site.baseUrl }}{{ site.logo }}"/>
+        <a class="p-name u-url" rel="author" href="{{ site.baseUrl }}">{{ site.name }}</a>
+      </p>
+    </div>
   </article>
-  {% set otherPosts = collections.posts | excludePage(page) | slice(-10) %}
-  <ul>
-    {% for post in otherPosts | reverse %}
-      <li>
-        <a href="{{ post.url | url }}">
-          <span>{{ post.data.title }}</span>
-          <time datetime="{{ post.date | dateToISO }}" aria-label=", written {{ post.date }}">
-            {{ post.date | readableDate('dd LLL yyyy') }}
-          </time>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+  {# {% set postlist = collections.posts | excludePage(page) | slice(-10) %}
+  {% include "postlist.njk" %} #}
 </main>
 {% include "footer.njk" %}
