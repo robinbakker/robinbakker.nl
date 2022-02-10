@@ -833,6 +833,10 @@ li.listing-item--tag {
   margin: 0;
   border-left: 0.2rem solid var(--main-color);
 }
+.body--blog article a {
+  word-break: break-all;
+  white-space: normal;
+}
 .body--blog footer {
   padding: 1.5rem 2rem;
 }
