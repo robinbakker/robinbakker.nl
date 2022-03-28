@@ -54,7 +54,7 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('/service-wor
   // observing intersection
   let homeItems = document.querySelectorAll('.js-home-item');
   const video = document.getElementById('homepage-video');
-  const hiddenVideo = window.getComputedStyle(video).display === 'none';
+  const hiddenVideo = video && window.getComputedStyle(video).display === 'none';
 
   const callback = (entries, _observer) => {
     entries.forEach((entry) => {
@@ -82,9 +82,10 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('/service-wor
     threshold: 0.7,
   };
 
-  const observer = new IntersectionObserver(callback, options);
-
-  homeItems.forEach((item) => observer.observe(item));
+  if (document.querySelector('.home-item')) {
+    const observer = new IntersectionObserver(callback, options);
+    homeItems.forEach((item) => observer.observe(item));
+  }
 
   const cLogFontStyle = 'font-size:16px;font-weight:bold;';
   console.log('%cI %c❤ %cDevTools', cLogFontStyle, 'font-size:14px;color:#f00;', cLogFontStyle);
