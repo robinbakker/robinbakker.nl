@@ -3,6 +3,7 @@ const { minify } = require('terser');
 const CleanCSS = require('clean-css');
 const Image = require('@11ty/eleventy-img');
 const path = require('path');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 
 const markdownIt = require('markdown-it');
 const markdownItOptions = {
@@ -142,6 +143,8 @@ module.exports = function (config) {
     ],
   });
 
+  config.addPlugin(pluginRss);
+
   // Layout aliases can make templates more portable
   config.addLayoutAlias('default', 'layouts/base.njk');
 
@@ -184,10 +187,11 @@ module.exports = function (config) {
   env = env == 'seed' ? 'prod' : env;
 
   config.addCollection('posts', function (collection) {
-    return collection
+    const c = collection
       .getFilteredByGlob(['./src/site/blog/*.md', './src/site/en/blog/*.md'])
       .filter((item) => item.data.permalink !== false)
       .filter((item) => !(item.data.draft && env === 'prod'));
+    return c;
   });
 
   // Create an array of all tags
