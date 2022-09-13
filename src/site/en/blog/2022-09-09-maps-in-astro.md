@@ -14,11 +14,11 @@ tags:
   - rroadtrips
 ---
 
-Last summer we went on a family roadtrip in the USA with an RV. That was awesome! For fun and to keep everyone up to date at home, I wanted to create a travel blog ([rroadtrips.com](https://www.rroadtrips.com)) with a map to show the route.
+Last summer we went on a family road trip in the USA with an RV. That was awesome! For fun and to keep everyone up to date at home, I wanted to create a travel blog ([rroadtrips.com](https://www.rroadtrips.com)) with a map to show the route.
 
 I wanted to build something with [Astro](https://astro.build) and was very time limited. 😅 So I was looking for a simple solution to display a map. Because Astro works with all kind of components/frameworks, I thought it would be easy to drop-in an existing React component and then just go with it...
 
-However, I quickly found out that it wouldn't be that logical to do that. Astro is all about static rendering and zero javascript, and that would not be the case with an interactive map. So loading the complete React libary for just one component? 🤔 [Preact](https://preactjs.com) (the 3KB React alternative) would be a better fit for this! And I could easy add other custom Preact components that would mostly render completely static with Astro.
+However, I quickly found out that it wouldn't be that logical to do that. Astro is all about static rendering and zero javascript, and that would not be the case with an interactive map. So loading the complete React library for just one component? 🤔 [Preact](https://preactjs.com) (the 3KB React alternative) would be a better fit for this! And I could easily add other custom Preact components that would mostly render completely static with Astro.
 
 ### TL;DR
 
