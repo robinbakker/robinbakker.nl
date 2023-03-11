@@ -2,9 +2,9 @@
 title: Robin Bakker
 description:
 layout: layouts/page.njk
-renderData:
-  metaTitle: 'Robin Bakker /uses'
-  metaDescription: 'Showing off my low-fi tech :P'
+eleventyComputed:
+  title: 'Robin Bakker /uses'
+  description: 'Showing off my low-fi tech :P'
 ---
 
 ## /uses
@@ -14,9 +14,9 @@ This is the 🤓 page to show off my personal low-fi tech 😜 (see [uses.tech](
 ### Hardware
 
 - 🎧 JBL Tune 600BT NC
-- 📱 Realme 9 Pro+ 5G
-- ⌚ Fossil Sport FTW4019 (Google Wear)
-- 💻 Lenovo Thinkbook 15 G2 ARE (Windows 11)
+- 📱 Pixel 6a
+- ⌚ Pixel Watch
+- 💻 Lenovo Thinkbook / Windows 11
 - ☕ Philips Espresso LatteGo 3200
 
 ### Web apps

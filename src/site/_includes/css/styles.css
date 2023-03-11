@@ -383,8 +383,8 @@ body .home-item--start {
   position: absolute;
   width: 72vmin;
   height: 138vmin;
-  border: 3vmin solid #000;
-  border-radius: 6.6vmin;
+  border: 2vmin solid #000;
+  border-radius: 4.6vmin;
   z-index: 1;
   background-color: #000;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
@@ -412,8 +412,8 @@ body .home-item--start {
 .phone-frame--camera::before {
   content: '\20';
   display: block;
-  width: 5.8vmin;
-  height: 5.8vmin;
+  width: 4.5vmin;
+  height: 4.5vmin;
   border-radius: 50%;
   z-index: 1;
   background: radial-gradient(
@@ -431,12 +431,12 @@ body .home-item--start {
   );
   position: absolute;
   top: 1.32vmin;
-  left: 1.32vmin;
+  left: calc(50% - 2.25vmin);
 }
 #homepage-video {
   display: none;
   width: auto;
-  height: 66vmin;
+  height: 69vmin;
   opacity: 0;
   animation: fadeInFull 0.2s ease-in-out 2s 1 forwards;
 }
@@ -464,12 +464,12 @@ body .home-item--start {
 #showcase-1tuner {
   position: static;
   z-index: 5;
-  width: 72vmin;
-  height: 138vmin;
-  border: 3vmin solid #000;
+  width: 71.5vmin;
+  height: 137.5vmin;
+  border: 2vmin solid #000;
   margin-top: 4rem;
   margin-bottom: -72vmin;
-  transform: rotate(6deg);
+  transform: rotate(9deg);
   box-shadow: 0 0rem 5rem rgb(255 255 255 / 25%);
 }
 body:not(.body--intro, .body--start) #showcase-1tuner {
@@ -1006,14 +1006,14 @@ img.article-image {
   .phone-frame {
     width: 36vmin;
     height: 69vmin;
-    border: 1.5vmin solid #000;
-    border-radius: 3.3vmin;
+    border: 1vmin solid #000;
+    border-radius: 2.3vmin;
   }
   .phone-frame--camera::before {
-    width: 2.9vmin;
-    height: 2.9vmin;
-    top: 0.66vmin;
-    left: 0.66vmin;
+    width: 2vmin;
+    height: 2vmin;
+    top: 0.75vmin;
+    left: calc(50% - 1vmin);
   }
   #homepage-video-container,
   #homepage-video {
@@ -1073,9 +1073,9 @@ img.article-image {
     position: absolute;
     top: 17vh;
     right: 6vw;
-    width: 36vmin;
-    height: 69vmin;
-    border: 1.5vmin solid #000;
+    width: 35.5vmin;
+    height: 68.5vmin;
+    border: 1vmin solid #000;
     opacity: 0;
     margin-bottom: 0;
     transform: rotate(3deg) translate3d(9vw, 6vh, 0);

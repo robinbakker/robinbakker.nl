@@ -6,12 +6,10 @@
     {%- endif -%}
     <head>
       <meta charset="utf-8">
-      {% if renderData.metaTitle %}
-        {% set pageTitle = renderData.metaTitle %}
+      {% if title %}
+        {% set pageTitle = title %}
       {% elif site[locale].metaTitle and not isBlog %}
         {% set pageTitle = site[locale].metaTitle %}
-      {% elif title %}
-        {% set pageTitle = title %}
       {% else %}
         {% set pageTitle = site.name %}
       {% endif %}
@@ -20,12 +18,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta name="mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-capable" content="yes">
-      {%- if not isBlog -%}
-        {% if renderData.metaDescription %}
-          {% set description = renderData.metaDescription %}
-        {% elif site[locale].metaDescription %}
-          {% set description = site[locale].metaDescription %}
-        {% endif %}
+      {%- if not isBlog and not description and site[locale].metaDescription -%}
+        {% set description = site[locale].metaDescription %}\
       {% endif %}
       <meta name="description" content="{{ description }}">
       <meta property="og:title" content="{{ title }}">
@@ -33,7 +27,7 @@
       <meta property="og:type" content="website">
       <meta property="og:url" content="{{ site.baseUrl }}{{ page.url }}">
       {%- if isBlog -%}
-        <meta property="og:image" content="{{ site.baseUrl }}{% socialImage renderData.metaTitle or title or pageTitle, site.name %}">
+        <meta property="og:image" content="{{ site.baseUrl }}{% socialImage pageTitle, site.name %}">
         <meta name="twitter:card" content="summary_large_image">
       {%- else -%}
         <meta property="og:image" content="{{ site.baseUrl }}{{ site.shareImage }}">
