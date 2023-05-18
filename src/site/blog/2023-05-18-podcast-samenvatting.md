@@ -1,6 +1,7 @@
 ---
 title: 'Van audio naar tekst met AI'
 description: 'Over het maken van Skipcast.nl; actuele podcast samenvattingen'
+alternateUrl: '/blog/podcast-samenvatting'
 bodyClass: 'body--blog body--blog-image-title'
 blogImage: './src/site/assets/img/blog/podcast-transcibers.png'
 blogImageOverlay: true
@@ -27,7 +28,7 @@ AI to the rescue! Ik had net toegang gekregen tot de nieuwe [Bing chat](https://
 
 **Powershell scripting**  
 Ik had geen ervaring met Powershell scripts voordat ik dit project begon, maar dit kon ik de Bing chat ook vragen. Al snel had ik een script draaien waarmee de laatste afleveringen van de Apple top-10 podcasts lijst werden gedownload. Vervolgens gebruikte ik [ffmpeg](https://ffmpeg.org) om elk mp3-bestand om te zetten naar een low-fi wav-bestand, zodat Whisper ermee aan de slag kon.  
-Op mijn laptop ging het vrij snel. De eerste Nederlandse podcast die ik deed werd een Engelse tekst. Tot mijn verbazing was het dus direct vertaald in vrij goed lopende Engelstalige zinnen!
+De eerste Nederlandse podcast die ik deed werd een Engelse tekst. Tot mijn verbazing was het dus direct vertaald in vrij goed lopende Engelstalige zinnen!
 
 **Whisper parameters**  
 Je kunt Whisper parameters meegeven om bijvoorbeeld aan te geven welk model ingeladen moet worden en in welke taal de audio-opname is. Uiteindelijk werkte ik met het “small” model, wat nog best veel foutjes teruggeeft, maar qua performance en resultaat acceptabel is.  
@@ -68,10 +69,10 @@ Deze aanpak werkt erg goed, omdat je hiermee het resultaat echt kunt dwingen in 
 **Website**  
 Op basis van de data kon ik nu de podcastafleveringen gaan afbeelden. Ik koos voor [Astro](https://astro.build), omdat ik verwachtte een statische website te kunnen maken. En met Astro kun je ook Preact componenten (her)gebruiken, wat mij voor dit project ook wel handig leek.
 
-{{ 'skipcast-logo.svg' | getInlineSVG('skipcast-logo') | safe }}
+[{{ 'skipcast-logo.svg' | getInlineSVG('skipcast-logo') | safe }}](http://skipcast.nl)
 
 De website draait bij [Vercel](https://vercel.com), via de @astrojs/vercel adapter kun je dan ook eenvoudig paginastatistieken aanzetten.  
-Nadat een podcastaflevering is verwerkt, wordt een deploy hook aangeroepen waardoor de website vernieuwd wordt.
+Nadat een podcastaflevering is verwerkt, wordt een "deploy hook" aangeroepen waardoor de website vernieuwd wordt.
 
 **POM Telegram community**  
 Ik luister regelmatig naar de [podcast POM](https://pom.show) - over media en technologie. Er is een bijhorende [groepschat in Telegram](https://pom.community), waar bijvoorbeeld in het “Kunstmatige Intelligentie” kanaal veel toffe links en tips gedeeld worden. Maar ook experimenten van andere luisteraars. Zo maakte Jan een nieuws website in Axios-stijl ([https://www.inhetkort.xyz](https://www.inhetkort.xyz)) en Frank een volledig [door AI gegenereerde podcast](https://1tuner.com/podcast/beyond-the-screen/aHR0cHM6Ly9mZWVkcy50cmFuc2lzdG9yLmZtL2JleW9uZC10aGUtc2NyZWVuLTg1ZDg3ZWYzLWRjYzYtNDg5NC1iMjI2LTQxYWNkM2U3ZmRiMg==) met gebruik van zijn eigen stem. Echt 🤯 dus. Ik deelde daar ook [skipcast.nl](http://skipcast.nl) en niet lang daarna zette [iemand dat op Twitter](https://twitter.com/AlexanderNL/status/1654425839566561282).
