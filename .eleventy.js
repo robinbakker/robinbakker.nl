@@ -17,6 +17,7 @@ const milaOptions = {
     rel: 'noopener',
   },
 };
+const markdownItFootnote = require('markdown-it-footnote');
 
 const imageShortcode = async (src, alt, className, widths = [null, 300, 600], formats = ['jpeg', 'webp'], sizes = '100vw') => {
   const metadata = await Image(src, {
@@ -166,7 +167,7 @@ module.exports = function (config) {
   config.addNunjucksAsyncShortcode('socialImage', socialImage);
   config.addShortcode('externalLink', (url, text) => `<a href="${url}" rel="noopener" target="_blank">${text}</a>`);
 
-  const markdownLib = markdownIt(markdownItOptions).use(mila, milaOptions);
+  const markdownLib = markdownIt(markdownItOptions).use(mila, milaOptions).use(markdownItFootnote);
   config.setLibrary('md', markdownLib);
 
   config.addFilter('date', require('./src/utils/filters/date.js'));

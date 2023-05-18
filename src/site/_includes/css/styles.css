@@ -251,6 +251,10 @@ article.container {
 article.container.h-entry {
   padding-bottom: 0;
 }
+article.container pre {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+}
 .overlay {
   display: block;
   position: fixed;
@@ -851,6 +855,7 @@ li.listing-item--tag {
   opacity: 0.85;
 }
 .body--blog article picture + em,
+.body--blog article a:has(picture) + em,
 .body--blog article picture + i {
   text-align: center;
   opacity: 0.85;
@@ -940,6 +945,32 @@ img.article-image {
   max-height: 1.5rem;
   width: auto;
   margin-right: 0.5rem;
+}
+.skipcast-openai-logo {
+  float: right;
+  max-width: 10rem;
+  height: auto;
+  width: 40%;
+  padding: 1rem 0 1rem 2rem;
+}
+.skipcast-openai-logo > svg {
+  max-width: 10rem;
+  height: auto;
+  display: block;
+}
+.body--blog .skipcast-logo > svg {
+  max-width: 20rem;
+  height: auto;
+  display: block;
+  margin: 2rem auto 0;
+}
+.body--blog a[href='https://www.youtube.com/watch?v=gBPxej3XCUE']:has(picture)
+{
+  text-decoration: none;
+}
+.body--blog a[href='https://www.youtube.com/watch?v=gBPxej3XCUE']:has(picture)::after
+{
+  display: none;
 }
 
 @media (orientation: portrait) {
