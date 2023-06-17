@@ -74,6 +74,38 @@
 <div id="showcase-1tuner" class="phone-frame"><img src="/assets/img/1tuner-home.png" loading="lazy" width="480" height="960" alt="1tuner home screen"/></div>
 </div>
 </div>
+<div class="home-item home-item--skipcast js-home-item" data-class="body--skipcast">
+<div class="container">
+<h2 class="logo logo--skipcast">{{ 'skipcast-logo.svg' | getInlineSVG | safe }}</h2>
+<div class="js-lang {{ 'is-hidden' if locale!='nl' }}" lang="nl">
+  <h3>Wat? Waarom? Hoe?</h3>
+  <p>Op <a href="https://skipcast.nl" rel="noopener" target="_blank">skipcast.nl</a> kun je samenvattingen van de beste podcasts terugvinden.</p>
+  <p>Ik wilde voor dit experiment meer te weten komen over het gebruik van KI/AI technologie. Met Whisper en de ChatGPT API van <a href="https://openai.com" rel="noopener" target="_blank">OpenAI</a> worden automatisch eerst podcast transcripties gemaakt, die daarna worden samengevat in verschillende schrijfstijlen. 
+      De website is gemaakt met <a href="https://astro.build" rel="noopener" target="_blank">Astro</a>,
+      draait via <a href="https://vercel.com" rel="noopener" target="_blank">Vercel</a> en is door het gebruik van
+      <a href="https://developers.cloudflare.com/workers/" rel="noopener" target="_blank">Cloudflare Workers</a> en verschillende triggers geheel geautomatiseerd.
+      <br>Lees meer in
+      <a href="/blog/podcast-samenvatting/">"Van audio naar tekst met AI"</a>
+      of op <a href="https://skipcast.nl/over/"  rel="noopener" target="_blank">skipcast.nl/over</a>.</p>
+  <p>
+    <a href="https://skipcast.nl" rel="noopener" target="_blank" class="btn btn-primary">Naar skipcast.nl</a>
+  </p>
+</div>
+<div class="js-lang {{ 'is-hidden' if locale!='en' }}" lang="en">
+  <h3>What? Why? How?</h3>
+  <p>At <a href="https://skipcast.nl" rel="noopener" target="_blank">skipcast.nl</a> (Dutch) you can find summaries of the most popular podcasts of the Netherlands.</p>
+  <p>For this experiment I wanted to find out more about using AI technology in websites. Using <a href="https://openai.com" rel="noopener" target="_blank">OpenAI</a>'s Whisper and ChatGPT API, podcasts are automatically transcribed and then summarised in different writing styles.
+      Made with <a href="https://astro.build" rel="noopener" target="_blank">Astro</a>,
+      runs at <a href="https://vercel.com" rel="noopener" target="_blank">Vercel</a> and is fully automated by using
+      <a href="https://developers.cloudflare.com/workers/" rel="noopener" target="_blank">Cloudflare Workers</a> with triggers.
+      <br>Read more in
+      <a href="/en/blog/podcast-summary/">"From audio to text with AI"</a>.</p>
+  <p>
+    <a href="https://skipcast.nl" rel="noopener" target="_blank" class="btn btn-primary">To skipcast.nl</a>
+  </p>
+</div>
+</div>
+</div>
 <div class="home-item home-item--topzender js-home-item" data-class="body--topzender">
 <div class="container">
 <h2 class="logo logo--topzender">{{ 'topzender-logo.svg' | getInlineSVG | safe }}</h2>

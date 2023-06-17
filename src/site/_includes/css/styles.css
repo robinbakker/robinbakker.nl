@@ -534,7 +534,12 @@ body:not(.body--intro, .body--start) #showcase-1tuner {
 .home-item--topzender {
   background: linear-gradient(162deg, rgb(186 215 255) 33%, rgb(46 134 255));
 }
+.home-item--skipcast {
+  background: #f6f6f6;
+  background: linear-gradient(162deg, #f6f6f6 56%, #806fff 76%, #9f4bff 90%);
+}
 .logo--1tuner svg,
+.logo--skipcast svg,
 .logo--topzender svg {
   margin: 15vmin 0 3vmin -2vmin;
   width: 60vmin;
@@ -1051,9 +1056,15 @@ img.article-image {
     display: block;
   }
   .logo--1tuner svg,
+  .logo--skipcast svg,
   .logo--topzender svg {
     margin: 15vmin 0 3vmin -1vw;
     width: 30vmin;
+  }
+  .logo--skipcast svg {
+    margin-top: 15vmin;
+    margin-left: -2vw;
+    width: 36vmin;
   }
   .logo--topzender svg {
     margin-top: 15vmin;
