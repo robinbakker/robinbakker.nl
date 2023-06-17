@@ -535,7 +535,7 @@ body:not(.body--intro, .body--start) #showcase-1tuner {
   background: linear-gradient(162deg, rgb(186 215 255) 33%, rgb(46 134 255));
 }
 .home-item--skipcast {
-  background: #f6f6f6;
+  padding-bottom: 25vh;
   background: linear-gradient(162deg, #f6f6f6 56%, #806fff 76%, #9f4bff 90%);
 }
 .logo--1tuner svg,
