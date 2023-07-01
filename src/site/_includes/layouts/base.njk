@@ -69,15 +69,15 @@
         {{css | cssmin | safe}}
       </style>
       <script defer src="/js/default.js?v={{ site.buildTime }}"></script>
-      {% set js %}
-      {% include "js/ga.js" %}
-      {% endset %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-P69Q85K9MX"></script>
       <script>
-        {{ js | jsmin | safe }}
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-P69Q85K9MX');
       </script>
-      {% set json %}
-      {% include "js/ga.js" %}
-      {% endset %}
       {%- if not isBlog -%}
         <script type="application/ld+json">
           {
