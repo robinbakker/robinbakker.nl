@@ -314,6 +314,15 @@ article.container pre {
   fill: rgba(0, 0, 0, 0.05);
 }
 
+.s6d {
+  position: absolute;
+  width: 100%;
+  height: 3rem;
+  background: rgba(255, 255, 255, 0.75);
+  top: 0;
+  line-height: 3rem;
+}
+
 .text--center {
   text-align: center;
 }

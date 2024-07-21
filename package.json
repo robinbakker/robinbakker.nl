@@ -18,19 +18,19 @@
   "private": true,
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-img": "^3.1.8",
+    "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "clean-css": "^5.3.2",
+    "clean-css": "^5.3.3",
     "cross-env": "^7.0.3",
-    "cssnano": "^6.0.1",
+    "cssnano": "^6.1.2",
     "del-cli": "5.1.0",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.4.5",
     "eleventy-plugin-pwa": "^1.0.8",
     "html-minifier": "^4.0.0",
     "markdown-it-link-attributes": "^4.0.1",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.31",
-    "terser": "^5.24.0"
+    "postcss": "^8.4.38",
+    "terser": "^5.30.1"
   },
   "prettier": {
     "trailingComma": "es5",
@@ -40,6 +40,6 @@
     "singleQuote": true
   },
   "dependencies": {
-    "markdown-it-footnote": "^3.0.3"
+    "markdown-it-footnote": "^4.0.0"
   }
 }
